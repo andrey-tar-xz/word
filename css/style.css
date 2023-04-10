@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#text-container {
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  width: 70vw;
+  height: 100vh;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #f8f8f8;
+  resize: none;
+}
