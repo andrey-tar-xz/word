@@ -11,11 +11,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
 
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+    const textarea = document.querySelector('textarea');
+    const textoSalvo = localStorage.getItem('textoSalvo');
+    
+    if (textoSalvo) {
+      textarea.value = textoSalvo;
+    }
+
+    textarea.addEventListener('input', function() {
+      localStorage.setItem('textoSalvo', textarea.value);
+    });
+  });
+  </script>
+
 </head>
 
 <body>
   <div id="text-container">
-    <textarea placeholder="Write here..." autofocus></textarea>
+    <textarea placeholder="Write here..." autofocus required></textarea>
   </div>
 </body>
 
